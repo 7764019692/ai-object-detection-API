@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AI Object Detection | Google Lens Clone</title>
+  <link rel="stylesheet" href="style.css" />
+
+  <!-- TensorFlow.js -->
+  <script defer src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@4.22.0/dist/tf.min.js"></script>
+  <!-- COCO-SSD model -->
+  <script defer src="https://cdn.jsdelivr.net/npm/@tensorflow-models/coco-ssd"></script>
+  <!-- Our script -->
+  <script defer src="script.js"></script>
+</head>
+<body>
+  <h1>🔍 AI Object Detection (Google Lens Clone)</h1>
+
+  <div class="container">
+    <div class="video-wrapper">
+      <video id="video" autoplay playsinline></video>
+      <canvas id="canvas"></canvas>
+    </div>
+
+    <div id="controls">
+      <button id="startBtn">Start Detection</button>
+      <button id="stopBtn">Stop Detection</button>
+    </div>
+
+    <div id="info">
+      <h2>Detected Objects</h2>
+      <div id="object-list">Waiting for camera...</div>
+      <p class="note">
+        * Distance is an approximate value based on object size in the image.<br/>
+        * For better results, use a known flat object (book, A4 paper) and hold it straight facing the camera.
+      </p>
+    </div>
+  </div>
+</body>
+</html>
